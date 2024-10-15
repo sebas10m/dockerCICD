@@ -52,4 +52,5 @@ jobs:
 
       # Scan the image for vulnerabilities using Trivy
       - name: Run Trivy Vulnerability Scan
-        run: ./trivy image ${{ secrets.DOCKER_USERNAME }}/my-app:${{ github.sha }}
+        run: ./bin/trivy image ${{ secrets.DOCKER_USERNAME }}/my-app:${{ github.sha }}
+
